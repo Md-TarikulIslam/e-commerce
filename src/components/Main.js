@@ -1,14 +1,16 @@
-import React from 'react';
-import Menu from './Shared/Menu/Menu';
-import { Outlet } from 'react-router-dom';
+import React from "react";
+import Menu from "./Shared/Menu/Menu";
+import { Outlet } from "react-router-dom";
+import Footer from "./Shared/Footer/Footer";
 
 const Main = () => {
-    return (
-        <div>
-            <Menu></Menu>
-            <Outlet></Outlet>
-        </div>
-    );
+  return (
+    <div>
+      <Menu></Menu>
+      <Outlet></Outlet>
+      <Footer></Footer>
+    </div>
+  );
 };
 
 export default Main;

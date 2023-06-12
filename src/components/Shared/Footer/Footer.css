@@ -1,0 +1,22 @@
+.foo{
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgba(128, 128, 128, 0.647);
+}
+.foo-icons{
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 0.338);
+}
+.foo-icons:hover{
+    background-color: rgb(247, 107, 106);
+}
+.send-btn{
+    background-color: rgb(247, 107, 106);
+    padding: 6px 20px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5rem;
+    border-radius: 10px;
+}

@@ -240,7 +240,7 @@ export default function Header() {
   }, []);
 
   return (
-    <Navbar className="mx-auto max-w-screen-3xl px-4 py-6 rounded-none">
+    <Navbar className="mx-auto max-w-screen-3xl sticky inset-0 z-10 px-4 py-6 rounded-none">
       <div className=" lg:flex items-center justify-between text-blue-gray-900">
         <div className="hidden lg:block">
           <NavList />
