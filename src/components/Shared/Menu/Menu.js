@@ -7,11 +7,13 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import "./Menu.css";
+import Header from "../Header/Header";
 
 const Menu = () => {
   return (
-    <div className="menu-style">
-      <div className="flex items-center justify-between text-white px-10">
+   <div>
+     <div className="menu-style">
+      <div className="flex items-center justify-between text-white px-5 md:px-10">
         <div className="flex items-center gap-5">
           <p className="icons">
             <FaFacebookF />
@@ -32,12 +34,14 @@ const Menu = () => {
             Call: <span className="underline">+01 23456789</span>
           </p>
         </div>
-        <div className="flex items-center gap-5">
+        <div className="md:flex items-center gap-5 hidden ">
           <p>English</p>
           <p>USD</p>
         </div>
       </div>
     </div>
+    <Header></Header>
+   </div>
   );
 };
 
