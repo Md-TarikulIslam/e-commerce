@@ -7,7 +7,7 @@ export default function Slider() {
   return (
     <Carousel
       transition={{ duration: 1 }}
-      className="rounded-xl"
+      className=""
       prevArrow={({ handlePrev }) => (
         <IconButton
           variant="text"

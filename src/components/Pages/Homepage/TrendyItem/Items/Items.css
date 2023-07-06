@@ -1,0 +1,23 @@
+.card {
+    width: 330px;
+    height: 295px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 200px;
+   
+}
+.img-size{
+    border-radius: 10px;
+
+}
+
+.card .img-top {
+    display: none;
+    position: absolute;
+    top: 23px;
+    left: 0;
+    z-index: 5;
+}
+.card:hover .img-top {
+    display: inline;
+}

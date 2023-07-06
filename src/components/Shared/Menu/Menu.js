@@ -30,9 +30,9 @@ const Menu = () => {
           <p className="icons">
             <FaInstagram />
           </p>
-          <p>
-            Call: <span className="underline">+01 23456789</span>
-          </p>
+          <a href="tel:+46 708698276">
+            Call: <span className="underline">+46 708698276</span>
+          </a>
         </div>
         <div className="md:flex items-center gap-5 hidden ">
           <p>English</p>
