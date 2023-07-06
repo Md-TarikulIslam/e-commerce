@@ -1,7 +1,7 @@
 import React from "react";
 import img1 from "../../../../../assets/images/items/1.webp";
 import img1_1 from "../../../../../assets/images/items/1.1.webp";
-import img2 from "../../../../../assets/images/bank/1.avif"
+import img2 from "../../../../../assets/images/bank/1.avif";
 import {
   Breadcrumbs,
   Button,
@@ -14,13 +14,13 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import {
-    FaFacebookF,
-    FaTwitter,
-    FaGooglePlusG,
-    FaPinterestP,
-    FaInstagram,
-    FaRegCopyright,
-  } from "react-icons/fa";
+  FaFacebookF,
+  FaTwitter,
+  FaGooglePlusG,
+  FaPinterestP,
+  FaInstagram,
+  FaRegCopyright,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { FcShipped } from "react-icons/fc";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
@@ -48,12 +48,12 @@ const Item = () => {
           <a href="#">Item 1</a>
         </Breadcrumbs>
       </div>
-      <div className="flex max-w-screen-2xl mx-auto gap-10 items-start">
-        <div className="flex gap-5">
+      <div className="flex flex-col lg:flex-row max-w-screen-2xl mx-auto gap-10 items-start">
+        <div className="flex gap-5 flex-col lg:flex-row mx-auto">
           <img className="w-72" src={img1} alt="" />
           <img className="w-72" src={img1_1} alt="" />
         </div>
-        <div>
+        <div className="">
           <h1 className="text-3xl font-bold">Elessi Knit Coats</h1>
           <div className="flex items-center my-2">
             <p className="text-xl">
@@ -240,16 +240,18 @@ const Item = () => {
             </Card>
           </div>
           <div className="flex items-center gap-7 mt-3">
-           <div>
-           <ButtonGroup color="gray" className=" rounded-xl">
-              <Button className="text-black">-</Button>
-              <Button className="text-black">1</Button>
-              <Button className="text-black">+</Button>
-            </ButtonGroup>
-           </div>
-           <div>
-            <Button className="w-48" color="red">Add to cart</Button>
-           </div>
+            <div>
+              <ButtonGroup color="gray" className=" rounded-xl">
+                <Button className="text-black">-</Button>
+                <Button className="text-black">1</Button>
+                <Button className="text-black">+</Button>
+              </ButtonGroup>
+            </div>
+            <div>
+              <Button className="w-48" color="red">
+                Add to cart
+              </Button>
+            </div>
           </div>
           <p className="ml-40 my-2">--or--</p>
           <Button className="w-96 hover:bg-green-900">Buy now</Button>
@@ -257,30 +259,31 @@ const Item = () => {
           <div className="flex items-center gap-10 mt-10">
             <p>Share on</p>
             <div className="flex items-center gap-3">
-            <span className="foo-icons">
-              <FaFacebookF />{" "}
-            </span>
-            <span className="foo-icons">
-              <FaTwitter />{" "}
-            </span>
-            <span className="foo-icons">
-              <FaGooglePlusG />{" "}
-            </span>
-            <span className="foo-icons">
-              <FaPinterestP />{" "}
-            </span>
-            <span className="foo-icons">
-              <FaInstagram />{" "}
-            </span>
+              <span className="foo-icons">
+                <FaFacebookF />{" "}
+              </span>
+              <span className="foo-icons">
+                <FaTwitter />{" "}
+              </span>
+              <span className="foo-icons">
+                <FaGooglePlusG />{" "}
+              </span>
+              <span className="foo-icons">
+                <FaPinterestP />{" "}
+              </span>
+              <span className="foo-icons">
+                <FaInstagram />{" "}
+              </span>
+            </div>
           </div>
-          </div>
-       
         </div>
       </div>
       <div className="mx-auto">
-            <p className="text-center mt-20 mb-10 text-3xl font-bold">Related Products</p>
-            <Items></Items>
-          </div>
+        <p className="text-center mt-20 mb-10 text-3xl font-bold">
+          Related Products
+        </p>
+        <Items></Items>
+      </div>
     </div>
   );
 };
