@@ -15,6 +15,7 @@ const fakeData = [
     name: "Elessi Knit Coats",
     price: "$86-$89",
     discount: "-10%",
+    link:"/item"
   },
   {
     id: 1,

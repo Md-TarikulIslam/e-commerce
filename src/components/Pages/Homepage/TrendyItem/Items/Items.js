@@ -2,6 +2,7 @@ import React from "react";
 import allProducts from "./fakeData";
 import "./Items.css";
 import { FcLike } from "react-icons/fc";
+import { Link } from "react-router-dom";
 const Items = () => {
   return (
     <div className="mb-10">
@@ -17,12 +18,14 @@ const Items = () => {
                   <FcLike />
                 </p>
               </div>
-              <img className="img-size " src={product.front_image} alt="" />
-              <img
-                className="img-top img-size"
-                src={product.back_image}
-                alt=""
-              />
+              <Link to={product.link}>
+                <img className="img-size " src={product.front_image} alt="" />
+                <img
+                  className="img-top img-size"
+                  src={product.back_image}
+                  alt=""
+                />
+              </Link>
               <p className="text-lg">{product.name}</p>
               <p className="text-lg text-red-500 font-semibold">
                 {product.price}
