@@ -2,7 +2,7 @@ import React from "react";
 import allProducts from "./fakeData";
 import "./Items.css";
 import { FcLike } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, ScrollRestoration } from "react-router-dom";
 const Items = () => {
   return (
     <div className="mb-10">
@@ -34,6 +34,7 @@ const Items = () => {
           );
         })}
       </div>
+      <ScrollRestoration />
     </div>
   );
 };

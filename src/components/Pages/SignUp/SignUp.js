@@ -8,7 +8,7 @@ import {
 } from "@material-tailwind/react";
 import img from "../../assets/images/login/1.jpg";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, ScrollRestoration } from "react-router-dom";
 import "./SignUp.css";
 
 export default function SignUp() {
@@ -89,6 +89,7 @@ export default function SignUp() {
           </Card>
         </div>
       </div>
+      <ScrollRestoration />
     </div>
   );
 }

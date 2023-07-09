@@ -8,6 +8,9 @@ export default function Slider() {
     <Carousel
       transition={{ duration: 1 }}
       className=""
+      loop={true}
+      autoplay={true}
+      autoplayDelay={3000}
       prevArrow={({ handlePrev }) => (
         <IconButton
           variant="text"
@@ -33,7 +36,7 @@ export default function Slider() {
     >
       {sliderData.map((slider) => {
         return (
-          <div>
+          <div key={slider.id}>
             <div className="absolute top-5 md:top-1/3 pl-16 md:pl-20 2xl:pl-44">
               <p className="uppercase text-gray-600 text-sm md:text-xl lg:text-3xl tracking-widest">
                 {slider.title}

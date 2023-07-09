@@ -7,7 +7,7 @@ import {
   } from "@material-tailwind/react";
   import img from "../../../components/assets/images/login/2.avif";
   import React from "react";
-  import { Link } from "react-router-dom";
+  import { Link, ScrollRestoration } from "react-router-dom";
   import './Login.css'
   
   
@@ -67,6 +67,7 @@ import {
           </Card>
         </div>
       </div>
+      <ScrollRestoration />
     </div>
     );
   }

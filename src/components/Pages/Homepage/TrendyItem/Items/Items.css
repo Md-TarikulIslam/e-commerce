@@ -1,9 +1,9 @@
 .card {
     width: 330px;
-    height: 295px;
+    height: 0px;
     position: relative;
     display: inline-block;
-    margin-bottom: 200px;
+    margin-bottom: 500px;
    
 }
 .img-size{
