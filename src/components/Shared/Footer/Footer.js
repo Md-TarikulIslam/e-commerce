@@ -38,7 +38,15 @@ const Footer = () => {
           <div className="flex flex-col items-start lg:flex-row lg:items-center gap-3 lg:gap-0">
             <p className="text-2xl font-bold mr-3">Newsletter</p>
             <div className="w-72 mr-3">
-              <Input color="red" label="Username" />
+              <Input
+                type="email"
+                placeholder="Email Address"
+                className="focus:!border-t-blue-500 focus:!border-blue-500 ring-4 ring-transparent focus:ring-blue-500/20 !border !border-blue-gray-50 bg-white shadow-lg shadow-blue-gray-900/5 placeholder:text-blue-gray-200 text-blue-gray-500"
+                labelProps={{
+                  className: "hidden",
+                }}
+                containerProps={{ className: "min-w-[100px]" }}
+              />
             </div>
 
             <button className="send-btn">Submit</button>
@@ -53,12 +61,14 @@ const Footer = () => {
             </p>
             <a href="tel:+46 708698276">
               <span>+46 708698276</span>
-            </a><br />
+            </a>
+            <br />
             <a href="mailto: info@kodeend.com" className="text">
               info@kodeend.com
-            </a><br />
+            </a>
+            <br />
             <a target="_blank" href="https://www.kodeend.com/">
-             KodeEnd IT Solutions AB
+              KodeEnd IT Solutions AB
             </a>
           </div>
           <div className="leading-10">
