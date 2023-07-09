@@ -21,7 +21,7 @@ import {
   FaInstagram,
   FaRegCopyright,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, ScrollRestoration } from "react-router-dom";
 import { FcShipped } from "react-icons/fc";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import Items from "../Items";
@@ -284,6 +284,7 @@ const Item = () => {
         </p>
         <Items></Items>
       </div>
+      <ScrollRestoration />
     </div>
   );
 };

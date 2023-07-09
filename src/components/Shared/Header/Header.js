@@ -36,6 +36,7 @@ import {
   FaShoppingCart,
 } from "react-icons/fa";
 import logo from "../../../components/assets/images/logo/logo.webp";
+import { Link } from "react-router-dom";
 
 const colors = {
   blue: "bg-blue-50 text-blue-500",
@@ -246,11 +247,16 @@ export default function Header() {
           <NavList />
         </div>
         <div className="left-64 absolute md:left-3/4 lg:left-2/4">
-          <img src={logo} alt="" />
+          <Link to="/">
+            <img src={logo} alt="" />
+          </Link>
         </div>
         <div className="hidden gap-5 lg:flex">
           <FaSearch />
-          <FaUser />
+          <Link to="/login">
+            {" "}
+            <FaUser />
+          </Link>
           <FaShoppingCart />
         </div>
         <IconButton
@@ -272,9 +278,11 @@ export default function Header() {
           <Button variant="text">
             <FaSearch />
           </Button>
-          <Button variant="text">
-            <FaUser />
-          </Button>
+          <Link to="/login">
+            <Button variant="text">
+              <FaUser />
+            </Button>
+          </Link>
           <Button variant="text">
             <FaShoppingCart />
           </Button>
