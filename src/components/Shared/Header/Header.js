@@ -12,7 +12,9 @@ import {
   MenuList,
   MenuItem,
   Chip,
+  Drawer,
 } from "@material-tailwind/react";
+
 import {
   ChevronDownIcon,
   CubeTransparentIcon,
@@ -37,6 +39,7 @@ import {
 } from "react-icons/fa";
 import logo from "../../../components/assets/images/logo/logo.webp";
 import { Link } from "react-router-dom";
+import { Search } from "../../Functionalities/Search/Search";
 
 const colors = {
   blue: "bg-blue-50 text-blue-500",
@@ -112,6 +115,7 @@ const navListMenuItems = [
 ];
 
 function NavListMenu() {
+  
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
@@ -246,18 +250,21 @@ export default function Header() {
         <div className="hidden lg:block">
           <NavList />
         </div>
-        <div className="left-64 absolute md:left-3/4 lg:left-2/4">
+        <div className="left-64 absolute md:left-3/4 lg:left-1/2">
           <Link to="/">
             <img src={logo} alt="" />
           </Link>
         </div>
         <div className="hidden gap-5 lg:flex">
-          <FaSearch />
+          <Search />
           <Link to="/login">
             {" "}
             <FaUser />
           </Link>
-          <FaShoppingCart />
+          <Link to="/cart">
+            <FaShoppingCart />
+          </Link>
+          
         </div>
         <IconButton
           variant="text"
@@ -276,16 +283,18 @@ export default function Header() {
         <NavList />
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
           <Button variant="text">
-            <FaSearch />
+            <Search />
           </Button>
           <Link to="/login">
             <Button variant="text">
               <FaUser />
             </Button>
           </Link>
-          <Button variant="text">
-            <FaShoppingCart />
-          </Button>
+          <Link to="/cart">
+            <Button variant="text">
+              <FaShoppingCart />
+            </Button>
+          </Link>
         </div>
       </Collapse>
     </Navbar>
