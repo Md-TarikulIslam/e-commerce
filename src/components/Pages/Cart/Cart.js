@@ -22,6 +22,7 @@ import img1 from "../../assets/images/items/1.webp";
 import img2 from "../../assets/images/items/2.jpg";
 import img3 from "../../assets/images/items/3.webp";
 import img4 from "../../assets/images/items/4.jpg";
+import { Link } from "react-router-dom";
 
 const TABLE_HEAD = ["Item", "Price", "Quantity", "Total", "", ""];
 
@@ -32,6 +33,7 @@ const TABLE_ROWS = [
     amount: "$86",
     date: "Wed 3:00pm",
     total: "$86",
+    link:'/payment'
   },
   {
     img: img2,
@@ -99,7 +101,7 @@ export default function Cart() {
                 </tr>
               </thead>
               <tbody>
-                {TABLE_ROWS.map(({ img, name, amount, total }, index) => {
+                {TABLE_ROWS.map(({ img, name, amount, total, link }, index) => {
                   const isLast = index === TABLE_ROWS.length - 1;
                   const classes = isLast
                     ? "p-4"
@@ -115,13 +117,14 @@ export default function Cart() {
                             size="lg"
                             className="border border-blue-gray-50 bg-blue-gray-50/50 object-contain p-1"
                           />
-                          <Typography
+                        <Link to={link}>
+                        <Typography
                             variant="small"
                             color="blue-gray"
                             className="font-bold"
                           >
                             {name}
-                          </Typography>
+                          </Typography></Link>
                         </div>
                       </td>
                       <td className={classes}>

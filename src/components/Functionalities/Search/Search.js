@@ -19,7 +19,7 @@ export function Search() {
  
   return (
    <div className="z-20" >
-     <React.Fragment >
+     <React.Fragment>
       <p onClick={openDrawer}><FaSearch /></p>
       <Drawer open={open} onClose={closeDrawer} placement="left">
         <div className="mb-2 flex items-center justify-between p-4 ">
